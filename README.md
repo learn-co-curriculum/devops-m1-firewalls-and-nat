@@ -41,6 +41,8 @@ $ sudo ufw allow out to <IP Address>
 
 Keep in mind when enabling `ufw` that it will deny all *incoming* traffic while allowing all *outgoing* traffic. From the point of enabling it, you have to manually allow the ports, protocols, or IPs you trust.
 
+When you block or allow *specific* addresses or ports, this is known as *blacklisting* or *whitelisting*. **Blacklisting** refers to *denying* access to a specific set; this set could be comprised of users, applications, IP addresses, etc. The rationale behind blacklisting can vary, but a good example would be blocking traffic from specific IP addresses known to be associated with malicious activity. Inversely, **whitelisting** refers to *allowing* access to a specific set, which are generally considered trustworthy, like in the `ufw` example above. Whitelisting is frequently used in networking when you close out an entire network with a few specific exceptions.
+
 For the time being, let's keep it off:
 
 ```bash
